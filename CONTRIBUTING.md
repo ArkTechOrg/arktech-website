@@ -155,5 +155,3 @@ Updating, improving and correcting the documentation
 <!-- TODO -->
 
 <!-- omit in toc -->
-## Attribution
-This guide is based on the **contributing-gen**. [Make your own](https://github.com/bttger/contributing-gen)!
