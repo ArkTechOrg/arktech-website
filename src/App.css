@@ -1,10 +1,10 @@
 #root {
-  background-color: #FFC020;
-  display: inline;
-  margin: 0 0 0 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-/*
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -22,26 +22,21 @@
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
 
 .read-the-docs {
   color: #888;
-}
-*/
-
-/*Align .logo to right bottom*/
-.logo {
-  position: absolute;
-  width: 546.14px;
-  height: 525.14px;
-  right: 0;
-  bottom: 0;
-  gap: 0px;
-  /* It still has a gap between the logo and the right bottom corner */
-
 }

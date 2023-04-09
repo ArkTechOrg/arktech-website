@@ -1,33 +1,39 @@
-import { useState } from 'react';
-import './App.css';
-import linuxLogo from './assets/linuxgang-penguin.svg';
+// App.jsx
+import React from 'react';
+import Navbar from './components/Navbar';
+import Project from './components/Project';
+import './styles.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      <header>
-        <h1>Welcome to our Open Source Development Site</h1>
-        <p>Explore our projects, contribute to the community, and learn from others.</p>
-      </header>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <footer>
-        <p>License: MIT</p>
-        <p>Contribute: <a href="https://github.com/Linux-Gang">https://github.com/Linux-Gang</a></p>
-      </footer>
-      <div className="penguin-container">
-      <img align="right" src={linuxLogo} className="penguin-container" />
-      </div>
+      <Navbar />
+      <main>
+      <h1 className="main-heading">Welcome to Linux-Gang</h1>
+  <p className="section-heading">Discover and contribute to open-source projects</p>
+  <section>
+    <h2 className="projects-heading">Featured Projects</h2>
+          <div className="projects-grid">
+            <Project
+              name="React"
+              description="A JavaScript library for building user interfaces"
+              image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
+            />
+            <Project
+              name="Node.js"
+              description="A JavaScript runtime built on Chrome's V8 JavaScript engine"
+              image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+            />
+            <Project
+              name="Python"
+              description="A high-level programming language for general-purpose programming"
+              image="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
+            />
+          </div>
+        </section>
+      </main>
     </div>
-  )
+  );
 }
 
 export default App;
