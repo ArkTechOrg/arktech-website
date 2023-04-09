@@ -1,3 +1,10 @@
-:root{
-  background-color: #FFC020;
+:root {
+  --primary-color: #FFC020;
+}
+
+body {
+  background-color: var(--primary-color);
+  background-image: url('./assets/linuxgang-penguin.svg');
+  background-position: bottom right;
+  background-repeat: no-repeat;
 }
