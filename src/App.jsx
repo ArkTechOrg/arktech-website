@@ -1,37 +1,65 @@
-// App.jsx
 import React from 'react';
-import Navbar from './components/Navbar';
-import Project from './components/Project';
 import './styles.css';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
+    <div>
+      <header>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Projects</a>
+          <a href="#">Community</a>
+          <a href="#">About</a>
+        </nav>
+      </header>
+
       <main>
-      <h1 className="main-heading">Welcome to Linux-Gang</h1>
-  <p className="section-heading">Discover and contribute to open-source projects</p>
-  <section>
-    <h2 className="projects-heading">Featured Projects</h2>
-          <div className="projects-grid">
-            <Project
-              name="React"
-              description="A JavaScript library for building user interfaces"
-              image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
-            />
-            <Project
-              name="Node.js"
-              description="A JavaScript runtime built on Chrome's V8 JavaScript engine"
-              image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
-            />
-            <Project
-              name="Python"
-              description="A high-level programming language for general-purpose programming"
-              image="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
-            />
-          </div>
+        <section className="hero">
+          <h1>Join the Linux Gang</h1>
+          <p>Collaborate with other developers on open source projects.</p>
+          <a href="#" className="btn">Get started</a>
+        </section>
+
+        <section className="projects">
+          <h2>Our Projects</h2>
+          <ul>
+            <li>
+              <a href="#">
+                <h3>Project 1</h3>
+                <p>Description of Project 1</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h3>Project 2</h3>
+                <p>Description of Project 2</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h3>Project 3</h3>
+                <p>Description of Project 3</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section className="community">
+          <h2>Join Our Community</h2>
+          <p>Connect with other developers and contribute to open source projects.</p>
+          <a href="#" className="btn">Join now</a>
+        </section>
+
+        <section className="about">
+          <h2>About Us</h2>
+          <p>We are a community of developers dedicated to creating and contributing to open source projects.</p>
+          <a href="#" className="btn">Learn more</a>
         </section>
       </main>
+
+      <footer>
+        <p>&copy; 2023 Linux Gang</p>
+      </footer>
     </div>
   );
 }
