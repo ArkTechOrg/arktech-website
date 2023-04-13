@@ -43,6 +43,18 @@ nav {
     font-size: 18px;
 }
 
+.nav-content li {
+    transition: 0.2s;
+}
+
+.nav-content li:hover {
+    transform: scale(1.05);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-shadow: #707070 0px 0px 10px;
+}
+
 .nav-github {
     position: fixed;
     right: 0;
