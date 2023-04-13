@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <React.Fragment>
-        <Navbar/>
-        <Body/>
+        <Navbar />
+        <Body />
       </React.Fragment>
     </div>
   )

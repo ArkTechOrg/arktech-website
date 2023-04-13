@@ -12,9 +12,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 ReactDOM.createRoot(document.getElementById("foot")).render(
   <React.StrictMode>
     <footer>
-        <p>
-            &copy; Linux Gang {new Date().getFullYear()}
-        </p>
+      <p>
+        &copy; Linux Gang {new Date().getFullYear()}
+      </p>
     </footer>
   </React.StrictMode>
 );
