@@ -35,6 +35,7 @@ nav {
     gap: 50px;
     color: #FFFFFF;
     padding: 5px;
+    padding-left: 30px;
 }
 
 .nav-content a {
