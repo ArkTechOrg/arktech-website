@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/linuxgang-logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GNU/Linux Gang</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/favicon/linuxgang-logo.svg" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-menu">
+            <img height="20px" width="30px" src="assets/nav/nav-menu-icon.svg" alt="Menu Icon">
+        </div>
+        <div class="nav-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/getstarted.html">Get Started</a></li>
+                <li><a href="pages/about.html">About Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-github">
+            <img height="30x" width="30px" src="assets/nav/github-mark-white.svg" alt="GitHub Link">
+        </div>
+    </nav>
+    <section>
+        <h1>Join the GNU/Linux Gang</h1>
+        <p>Collaborate with Developers and work on Open Source Projects</p>
+        <div class="get__started__button" onclick="location.href='pages/getstarted.html';">
+            <button>Get Started</button>
+        </div>
+    </section>
+    <div class="penguin">
+        <img src="assets/section/linuxgang-penguin.svg" alt="Linux Gang Penguin">
+    </div>
+    <footer>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+    </footer>
+
+</body>
+
 </html>
