@@ -1,0 +1,155 @@
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    overflow: hidden;
+    padding: 14px;
+}
+
+.nav-menu {
+    display: none;
+}
+
+.nav-content {
+    display: flex;
+    float: left;
+}
+
+.nav-content ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+.nav-content a {
+    text-decoration: none;
+    color: azure;
+    font-size: 18px;
+}
+
+.nav-github {
+    position: fixed;
+    right: 0;
+    padding-right: 15px;
+}
+
+section {
+    background-color: #FCCF17;
+    color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 30px;
+    padding-bottom: 100px;
+    align-items: center;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 32px;
+}
+
+section p {
+    text-align: center;
+    font-size: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.get__started__button {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 7px;
+    width: 100px;
+    box-shadow: #707070 0px 0px 8px;
+    transition: 0.2s;
+}
+
+.get__started__button button {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 750px;
+}
+
+.get__started__button:hover {
+    transform: scale(1.05);
+    border: none;
+    border-radius: 7px;
+    box-shadow: #707070 0px 0px 10px;
+}
+
+.penguin {
+    position: relative;
+}
+
+.penguin img {
+    position: fixed;
+    height: 296.14px;
+    right: 0;
+    bottom: 60px;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        display: unset;
+    }
+
+    .nav-content ul {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        float: left;
+        list-style-type: none;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .penguin img {
+        width: 100%;
+        float: none;
+    }
+}
+
+footer {
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #707070;
+    box-shadow: #707070 0px 0px 10px;
+    text-align: center;
+}
