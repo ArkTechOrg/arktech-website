@@ -49,6 +49,18 @@ nav {
     padding-right: 15px;
 }
 
+.nav-github img {
+    transition: 0.2s;
+}
+
+.nav-github img:hover {
+    transform: scale(1.05);
+    border: none;
+    border-radius: 15px;
+    box-shadow: #707070 0px 0px 10px;
+    cursor: pointer;
+}
+
 section {
     background-color: #FCCF17;
     color: #1E1E1E;
