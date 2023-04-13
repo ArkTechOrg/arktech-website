@@ -97,6 +97,12 @@ section p {
     padding-right: 30px;
 }
 
+.get__started__button__container {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
 .get__started__button {
     background-color: #1E1E1E;
     color: #FFFFFF;
@@ -156,6 +162,11 @@ section p {
         list-style-type: none;
         margin: 0;
         padding: 5px;
+    }
+
+    .get__started__button__container {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .penguin img {
