@@ -9,7 +9,7 @@ export default function Body() {
                 <h1>Join the GNU/Linux Gang</h1>
                 <p>Collaborate with Developers and work on Open Source Projects</p>
                 <div className="get__started__button__container">
-                    {isClicked ? <><button className="get__started__button">WhatSapp</button><button className="get__started__button">Discord</button></>
+                    {isClicked ? <><button className="get__started__button">WhatsApp</button><button className="get__started__button">Discord</button></>
                         : <button className="get__started__button" onClick={() => setClicked(true)}>Get Started</button>}
                 </div>
             </section>
