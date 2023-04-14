@@ -45,7 +45,7 @@ This will create a `build` folder containing the optimized production-ready file
 
 ## Conclusion
 
-That's it! You should now have the project up and running on your local machine. If you encounter any issues, please refer to the project's documentation or contact the project maintainers for support.
+That's it! You should now have the project up and running on your local machine. If you encounter any issues, please refer to the project's documentation.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # linuxgang-website-alt
