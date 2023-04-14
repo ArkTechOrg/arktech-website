@@ -52,9 +52,11 @@ nav {
     font-size: 18px;
 }
 
+/*
 .nav-content li {
     transition: 0.2s;
 }
+
 
 .nav-content li:hover {
     transform: scale(1.05);
@@ -63,6 +65,7 @@ nav {
     cursor: pointer;
     text-shadow: #707070 0px 0px 10px;
 }
+*/
 
 .nav-github {
     position: fixed;
@@ -70,9 +73,11 @@ nav {
     padding-right: 15px;
 }
 
+/*
 .nav-github img {
     transition: 0.2s;
 }
+
 
 .nav-github img:hover {
     transform: scale(1.05);
@@ -81,6 +86,7 @@ nav {
     box-shadow: #707070 0px 0px 10px;
     cursor: pointer;
 }
+*/
 
 section {
     background-color: #FCCF17;
