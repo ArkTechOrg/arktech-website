@@ -78,7 +78,7 @@ export default function Body() {
           transition={penguin}
           initial={{ y: 600 }}
           animate={{ y: 10 }}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.5 }}
           src={Penguin}
           alt="Linux Gang Penguin"
         />
