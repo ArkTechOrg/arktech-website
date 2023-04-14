@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Penguin from "../assets/section/linuxgang-penguin.svg";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -38,6 +38,13 @@ const penguin = {
 
 export default function Body() {
   const [isClicked, setClicked] = useState(false);
+  const [match, setMatch] = useState(true);
+
+  useEffect(() => {
+    const match = window.matchMedia("(max-width: 600px)");
+    setMatch(match);
+  }, [window.innerWidth]);
+
   return (
     <React.Fragment>
       <motion.section layout>
@@ -104,26 +111,29 @@ export default function Body() {
           </AnimatePresence>
         </div>
       </motion.section>
-      <div className="penguin_mobile">
-        <motion.img
-          transition={penguin}
-          initial={{ y: 600 }}
-          animate={{ y: 10 }}
-          whileHover={{ scale: 1.5 }}
-          src={Penguin}
-          alt="Linux Gang Penguin"
-        />
-      </div>
-      <div className="penguin_desktop">
-        <motion.img
-          transition={penguin}
-          initial={{ x: 600 }}
-          animate={{ x: 10 }}
-          whileHover={{ scale: 1.5 }}
-          src={Penguin}
-          alt="Linux Gang Penguin"
-        />
-      </div>
+      {match ? (
+        <div className="penguin">
+          <motion.img
+            transition={penguin}
+            initial={{ y: 452 }}
+            animate={{ y: 10 }}
+            whileHover={{ scale: 1.5 }}
+            src={Penguin}
+            alt="Linux Gang Penguin"
+          />
+        </div>
+      ) : (
+        <div className="penguin">
+          <motion.img
+            transition={penguin}
+            initial={{ x: 600 }}
+            animate={{ x: 10 }}
+            whileHover={{ scale: 1.5 }}
+            src={Penguin}
+            alt="Linux Gang Penguin"
+          />
+        </div>
+      )}
     </React.Fragment>
   );
 }

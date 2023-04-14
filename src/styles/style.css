@@ -125,16 +125,11 @@ section p {
     cursor: pointer;
 }
 
-
-.penguin_mobile {
-    display: none;
-}
-
-.penguin_desktop {
+.penguin {
     position: relative;
 }
 
-.penguin_desktop img {
+.penguin img {
     position: fixed;
     height: 20rem;
     right: 0;
@@ -163,15 +158,7 @@ section p {
         gap: 20px;
     }
 
-    .penguin_desktop {
-        display: none;
-    }
-
-    .penguin_mobile {
-        position: relative;
-    }
-
-    .penguin_mobile img {
+    .penguin img {
         width: 100%;
         height: 50vw;
         float: none;
