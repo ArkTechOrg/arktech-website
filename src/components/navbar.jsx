@@ -8,7 +8,7 @@ function Navbar() {
       <div className="nav-menu">
         <img height="20px" width="30px" src={navMenuIcon} alt="Menu Icon" />
       </div>
-      <div class="nav-content">
+      <div className="nav-content">
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/">Get Started</a></li>
@@ -16,7 +16,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="nav-github">
-        <img height="30x" width="30px" src={githubMarkWhite} alt="GitHub Link" />
+        <img height="30px" width="30px" src={githubMarkWhite} alt="GitHub Link" />
       </div>
     </nav>
   );
