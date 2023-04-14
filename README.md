@@ -28,7 +28,7 @@ This will install all of the dependencies listed in the `package.json` file.
 3. Once the node modules have been installed, you can start the project by running:
 
 ```bash
-npm start
+npm run dev
 ```
 
 This will start the development server, and you can view the project by navigating to `http://localhost:3000` in your browser.
