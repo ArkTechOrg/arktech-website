@@ -57,6 +57,7 @@ function Navbar() {
             width="30px"
             src={githubMarkWhite}
             alt="GitHub Link"
+            onClick={() => window.open("https://github.com/Linux-Gang")}
           />
         </div>
       </motion.nav>
