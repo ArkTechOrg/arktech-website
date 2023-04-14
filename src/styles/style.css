@@ -124,7 +124,6 @@ section p {
     border-radius: 7px;
     width: 150px;
     box-shadow: #707070 0px 0px 8px;
-    transition: 0.2s;
 }
 
 .get__started__button button {
@@ -137,12 +136,6 @@ section p {
     cursor: pointer;
 }
 
-.get__started__button:hover {
-    transform: scale(1.05);
-    border: none;
-    border-radius: 7px;
-    box-shadow: #707070 0px 0px 10px;
-}
 
 .penguin {
     position: relative;
@@ -150,16 +143,9 @@ section p {
 
 .penguin img {
     position: fixed;
-    height: 296.14px;
+    height: 20rem;
     right: 0;
-    bottom: 60px;
-    transition: 0.2s;
-}
-
-.penguin img:hover {
-    transform: scale(1.5);
-    border: none;
-    cursor: default;
+    bottom: 50px;
 }
 
 @media screen and (max-width: 600px) {
