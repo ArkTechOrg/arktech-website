@@ -113,15 +113,19 @@ section p {
 }
 
 
-.penguin {
+.penguin_desktop {
     position: relative;
 }
 
-.penguin img {
+.penguin_desktop img {
     position: fixed;
     height: 30vh;
     right: 0;
-    bottom: 50px;
+    bottom: 45px;
+}
+
+.penguin_mobile {
+    display: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -146,9 +150,20 @@ section p {
         gap: 20px;
     }
 
-    .penguin img {
+    .penguin_desktop {
+        display: none;
+    }
+
+    .penguin_mobile {
+        display: unset;
+        position: relative;
+    }
+
+    .penguin_mobile img {
+        position: fixed;
+        bottom: 45px;
+        height: 30vh;
         width: 100%;
-        height: 50vw;
         float: none;
     }
 }

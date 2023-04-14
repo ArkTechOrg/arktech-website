@@ -73,11 +73,21 @@ export default function Body() {
           </AnimatePresence>
         </div>
       </motion.section>
-      <div class="penguin">
+      <div class="penguin_mobile">
         <motion.img
           transition={penguin}
           initial={{ y: 600 }}
           animate={{ y: 10 }}
+          whileHover={{ scale: 1.5 }}
+          src={Penguin}
+          alt="Linux Gang Penguin"
+        />
+      </div>
+      <div class="penguin_desktop">
+        <motion.img
+          transition={penguin}
+          initial={{ x: 600 }}
+          animate={{ x: 10 }}
           whileHover={{ scale: 1.5 }}
           src={Penguin}
           alt="Linux Gang Penguin"
