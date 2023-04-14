@@ -1,20 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import App from './App';
 import './styles/style.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+  document.getElementById('root')
 );
 
-ReactDOM.createRoot(document.getElementById("foot")).render(
+ReactDOM.render(
   <React.StrictMode>
     <footer>
       <p>
         &copy; GNU/Linux Gang {new Date().getFullYear()}
       </p>
     </footer>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('foot')
 );
