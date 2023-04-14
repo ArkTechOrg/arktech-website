@@ -52,18 +52,6 @@ nav {
     font-size: 18px;
 }
 
-.nav-content li {
-    transition: 0.2s;
-}
-
-.nav-content li:hover {
-    transform: scale(1.05);
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    text-shadow: #707070 0px 0px 10px;
-}
-
 .nav-github {
     position: fixed;
     right: 0;
@@ -71,14 +59,13 @@ nav {
 }
 
 .nav-github img {
-    transition: 0.2s;
+    border: none;
+    border-radius: 15px;
 }
 
 .nav-github img:hover {
-    transform: scale(1.05);
     border: none;
     border-radius: 15px;
-    box-shadow: #707070 0px 0px 10px;
     cursor: pointer;
 }
 
@@ -95,14 +82,16 @@ section {
 
 section h1 {
     text-align: center;
-    font-size: 32px;
+    font-size: 2rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
 }
 
 section p {
     text-align: center;
-    font-size: 16px;
-    padding-left: 30px;
-    padding-right: 30px;
+    font-size: 1.25rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
 }
 
 .get__started__button__container {
@@ -137,15 +126,19 @@ section p {
 }
 
 
-.penguin {
+.penguin_mobile {
+    display: none;
+}
+
+.penguin_desktop {
     position: relative;
 }
 
-.penguin img {
+.penguin_desktop img {
     position: fixed;
     height: 20rem;
     right: 0;
-    bottom: 50px;
+    bottom: 45px;
 }
 
 @media screen and (max-width: 600px) {
@@ -170,7 +163,15 @@ section p {
         gap: 20px;
     }
 
-    .penguin img {
+    .penguin_desktop {
+        display: none;
+    }
+
+    .penguin_mobile {
+        position: relative;
+    }
+
+    .penguin_mobile img {
         width: 100%;
         height: 50vw;
         float: none;

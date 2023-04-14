@@ -3,10 +3,24 @@ import Penguin from "../assets/section/linuxgang-penguin.svg";
 import { AnimatePresence, motion } from "framer-motion";
 
 const spring = {
-  type: "spring",
-  stiffness: 800,
-  damping: 25,
-  duration: 1,
+  hidden: {
+    scale: 0,
+    opacity: 0,
+  },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 800,
+      damping: 25,
+      duration: 0.2,
+    },
+  },
+};
+
+const spring_tran = {
+  transition: 0.6,
 };
 
 const penguin = {
@@ -27,30 +41,46 @@ export default function Body() {
   return (
     <React.Fragment>
       <motion.section layout>
-        <h1>Join the GNU/Linux Gang</h1>
-        <p>Collaborate with Developers and work on Open Source Projects</p>
+        <motion.h1
+          variants={spring}
+          transition={{ delay: 0.2 }}
+          initial="hidden"
+          animate="show"
+        >
+          Join the GNU/Linux gang
+        </motion.h1>
+        <motion.p
+          variants={spring}
+          transition={{ delay: 0.4 }}
+          initial="hidden"
+          animate="show"
+        >
+          Collaborate with Developers and work on Open Source Projects
+        </motion.p>
 
         <div className="get__started__button__container">
           <AnimatePresence>
             {isClicked ? (
               <>
                 <motion.button
-                  transition={spring}
+                  variants={spring}
+                  transition={spring_tran}
                   whileHover={{ scale: 1.1 }}
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
                   className="get__started__button"
                   onClick={() => setClicked(false)}
                 >
                   WhatsApp
                 </motion.button>
                 <motion.button
-                  transition={spring}
+                  variants={spring}
+                  transition={spring_tran}
                   whileHover={{ scale: 1.1 }}
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
                   className="get__started__button"
                   onClick={() => setClicked(false)}
                 >
@@ -59,11 +89,12 @@ export default function Body() {
               </>
             ) : (
               <motion.button
-                transition={spring}
+                variants={spring}
+                transition={spring_tran}
                 whileHover={{ scale: 1.1 }}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0 }}
+                initial="hidden"
+                animate="show"
+                exit="exit"
                 className="get__started__button"
                 onClick={() => setClicked(true)}
               >
@@ -73,12 +104,22 @@ export default function Body() {
           </AnimatePresence>
         </div>
       </motion.section>
-      <div class="penguin">
+      <div class="penguin_mobile">
         <motion.img
           transition={penguin}
           initial={{ y: 600 }}
           animate={{ y: 10 }}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.5 }}
+          src={Penguin}
+          alt="Linux Gang Penguin"
+        />
+      </div>
+      <div class="penguin_desktop">
+        <motion.img
+          transition={penguin}
+          initial={{ x: 600 }}
+          animate={{ x: 10 }}
+          whileHover={{ scale: 1.5 }}
           src={Penguin}
           alt="Linux Gang Penguin"
         />
