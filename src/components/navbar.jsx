@@ -19,7 +19,7 @@ function Navbar() {
         <div className="nav-menu">
           <img height="20px" width="30px" src={navMenuIcon} alt="Menu Icon" />
         </div>
-        <div class="nav-content">
+        <div className="nav-content">
           <ul>
             <motion.li transition={spring} whileHover={textHover}>
               <a href="/">Home</a>

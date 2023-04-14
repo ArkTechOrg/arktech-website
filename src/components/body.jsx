@@ -104,7 +104,7 @@ export default function Body() {
           </AnimatePresence>
         </div>
       </motion.section>
-      <div class="penguin_mobile">
+      <div className="penguin_mobile">
         <motion.img
           transition={penguin}
           initial={{ y: 600 }}
@@ -114,7 +114,7 @@ export default function Body() {
           alt="Linux Gang Penguin"
         />
       </div>
-      <div class="penguin_desktop">
+      <div className="penguin_desktop">
         <motion.img
           transition={penguin}
           initial={{ x: 600 }}
