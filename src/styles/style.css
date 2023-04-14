@@ -11,6 +11,14 @@ body {
     background-color: black;
 }
 
+.App {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    overflow-x: hidden;
+    background-color: black;
+}
+
 nav {
     display: flex;
     justify-content: center;
