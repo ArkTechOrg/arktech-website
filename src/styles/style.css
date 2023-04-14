@@ -157,7 +157,7 @@ section p {
 }
 
 .penguin img:hover {
-    transform: scale(1.05);
+    transform: scale(1.5);
     border: none;
     cursor: default;
 }
