@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("foot")).render(
   <React.StrictMode>
     <footer>
       <p>
-        &copy; Linux Gang {new Date().getFullYear()}
+        &copy; GNU/Linux Gang {new Date().getFullYear()}
       </p>
     </footer>
   </React.StrictMode>
