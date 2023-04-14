@@ -26,39 +26,14 @@ export default function Body() {
   const [isClicked, setClicked] = useState(false);
   return (
     <React.Fragment>
-      <motion.div layout transition={spring}>
-        <section>
-          <h1>Join the GNU/Linux Gang</h1>
-          <p>Collaborate with Developers and work on Open Source Projects</p>
+      <motion.section layout>
+        <h1>Join the GNU/Linux Gang</h1>
+        <p>Collaborate with Developers and work on Open Source Projects</p>
 
-          <div className="get__started__button__container">
-            <AnimatePresence>
-              {isClicked ? (
-                <>
-                  <motion.button
-                    transition={spring}
-                    whileHover={{ scale: 1.1 }}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    exit={{ scale: 0 }}
-                    className="get__started__button"
-                    onClick={() => setClicked(false)}
-                  >
-                    WhatsApp
-                  </motion.button>
-                  <motion.button
-                    transition={spring}
-                    whileHover={{ scale: 1.1 }}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    exit={{ scale: 0 }}
-                    className="get__started__button"
-                    onClick={() => setClicked(false)}
-                  >
-                    Discord
-                  </motion.button>
-                </>
-              ) : (
+        <div className="get__started__button__container">
+          <AnimatePresence>
+            {isClicked ? (
+              <>
                 <motion.button
                   transition={spring}
                   whileHover={{ scale: 1.1 }}
@@ -66,25 +41,48 @@ export default function Body() {
                   animate={{ scale: 1 }}
                   exit={{ scale: 0 }}
                   className="get__started__button"
-                  onClick={() => setClicked(true)}
+                  onClick={() => setClicked(false)}
                 >
-                  Get Started
+                  WhatsApp
                 </motion.button>
-              )}
-            </AnimatePresence>
-          </div>
-        </section>
-        <div class="penguin">
-          <motion.img
-            transition={penguin}
-            initial={{ y: 600 }}
-            animate={{ y: 10 }}
-            whileHover={{ scale: 1.1 }}
-            src={Penguin}
-            alt="Linux Gang Penguin"
-          />
+                <motion.button
+                  transition={spring}
+                  whileHover={{ scale: 1.1 }}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  className="get__started__button"
+                  onClick={() => setClicked(false)}
+                >
+                  Discord
+                </motion.button>
+              </>
+            ) : (
+              <motion.button
+                transition={spring}
+                whileHover={{ scale: 1.1 }}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0 }}
+                className="get__started__button"
+                onClick={() => setClicked(true)}
+              >
+                Get Started
+              </motion.button>
+            )}
+          </AnimatePresence>
         </div>
-      </motion.div>
+      </motion.section>
+      <div class="penguin">
+        <motion.img
+          transition={penguin}
+          initial={{ y: 600 }}
+          animate={{ y: 10 }}
+          whileHover={{ scale: 1.1 }}
+          src={Penguin}
+          alt="Linux Gang Penguin"
+        />
+      </div>
     </React.Fragment>
   );
 }
