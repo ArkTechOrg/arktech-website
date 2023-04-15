@@ -59,6 +59,10 @@ nav {
     cursor: pointer;
 }
 
+.sidebar {
+    display: none;
+}
+
 section {
     background-color: #FCCF17;
     color: #1E1E1E;
@@ -149,6 +153,33 @@ section p {
         list-style-type: none;
         margin: 0;
         padding: 5px;
+    }
+
+    .sidebar {
+        display: unset;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: #1E1E1E;
+
+    }
+    .sidebar ul {
+        list-style-type: none;
+        gap: 50px;
+        color: #FFFFFF;
+        padding: 1rem;
+    }
+
+    .sidebar li {
+        padding-bottom: 1rem;
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        color: azure;
+        font-size: 2rem;
     }
 
     .get__started__button__container {
