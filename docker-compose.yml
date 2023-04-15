@@ -1,0 +1,21 @@
+services:
+  linuxgang-website:
+    image: linuxgang-website:latest
+    container_name: linuxgang-website
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - linuxgang-certs:/etc/nginx/certs/
+    networks:
+      - linuxgang-network
+
+volumes:
+  linuxgang-certs:
+    external: true
+    name: linuxgang-certs
+
+networks:
+  linuxgang-network:
+    driver: bridge
