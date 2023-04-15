@@ -26,9 +26,11 @@ export default function Body() {
   const [isClicked, setClicked] = useState(false);
   return (
     <React.Fragment>
-      <motion.section layout>
-        <h1>Join the GNU/Linux Gang</h1>
-        <p>Collaborate with Developers and work on Open Source Projects</p>
+      <motion.section layout="size">
+        <motion.h1 layout="position">Join the GNU/Linux Gang</motion.h1>
+        <motion.p layout="position">
+          Collaborate with Developers and work on Open Source Projects
+        </motion.p>
 
         <div className="get__started__button__container">
           <AnimatePresence>
