@@ -56,6 +56,7 @@ nav {
     position: fixed;
     right: 0;
     padding-right: 15px;
+    cursor: pointer;
 }
 
 section {
