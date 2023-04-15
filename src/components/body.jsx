@@ -86,7 +86,7 @@ export default function Body() {
       <div class="penguin_desktop">
         <motion.img
           transition={penguin}
-          initial={{ x: 600 }}
+          initial={{ x: -2000 }}
           animate={{ x: 10 }}
           whileHover={{ scale: 1.5 }}
           src={Penguin}
