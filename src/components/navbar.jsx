@@ -29,20 +29,30 @@ const githubButtonHover = {
   borderRadius: "50%",
 };
 
+const sidebar = {
+  start: {},
+  finished: {
+    transition: {
+      delayChildren: 0.1,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const sidebar_item = {
+  start: {
+    x: -200,
+  },
+  finished: {
+    x: 0,
+  },
+};
+
 function Navbar() {
   const [showSidebar, setShowSidebar] = useState(false);
   return (
     <AnimatePresence>
       <motion.nav initial={{ y: -30 }} animate={{ y: 0 }}>
-        <div className="nav-menu">
-          <img
-            height="20px"
-            width="30px"
-            src={navMenuIcon}
-            alt="Menu Icon"
-            onClick={() => setShowSidebar(true)}
-          />
-        </div>
         <div class="nav-content">
           <AnimatePresence>
             <ul>
@@ -75,26 +85,40 @@ function Navbar() {
               transition={{ type: "tween" }}
               className="sidebar"
               onClick={() => setShowSidebar(false)}
-              initial={{ x: "-100vw" }}
+              initial={{ x: "-60vw" }}
               animate={{ x: 0 }}
-              exit={{ x: "-100vw" }}
+              exit={{ x: "-60vw" }}
             >
               <AnimatePresence>
-                <ul>
-                  <motion.li>
+                <motion.ul
+                  variants={sidebar}
+                  initial="start"
+                  animate="finished"
+                >
+                  <motion.li variants={sidebar_item}>
                     <a href="/">Home</a>
                   </motion.li>
-                  <motion.li>
+                  <motion.li variants={sidebar_item}>
                     <a href="/">Get Started</a>
                   </motion.li>
-                  <motion.li>
+                  <motion.li variants={sidebar_item}>
                     <a href="/">About Us</a>
                   </motion.li>
-                </ul>
+                </motion.ul>
               </AnimatePresence>
             </motion.div>
           )}
         </AnimatePresence>
+        <div
+          className={showSidebar ? "nav-menu open" : "nav-menu"}
+          onClick={
+            showSidebar
+              ? () => setShowSidebar(false)
+              : () => setShowSidebar(true)
+          }
+        >
+          <div className="nav-menu_burger" />
+        </div>
       </motion.nav>
     </AnimatePresence>
   );
