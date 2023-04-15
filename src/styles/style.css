@@ -116,6 +116,7 @@ section p {
 
 .penguin_desktop {
     position: relative;
+    cursor: grab;
 }
 
 .penguin_desktop img {
@@ -123,6 +124,10 @@ section p {
     height: 30vh;
     right: 0;
     bottom: 45px;
+}
+
+.penguin_desktop img:active {
+    cursor: grabbing;
 }
 
 .penguin_mobile {
