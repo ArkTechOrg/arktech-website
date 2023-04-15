@@ -1,6 +1,6 @@
 services:
   linuxgang-website:
-    image: linuxgang-website:latest
+    image: arkapravoghosh1/linuxgang-website:latest
     container_name: linuxgang-website
     restart: always
     ports:
