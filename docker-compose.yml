@@ -1,21 +1,21 @@
 services:
-  linuxgang-website:
-    image: arkapravoghosh1/linuxgang-website:latest
-    container_name: linuxgang-website
+  arktech-website:
+    image: arkapravoghosh1/arktech-website:latest
+    container_name: arktech-website
     restart: always
     ports:
       - 80:80
       - 443:443
     volumes:
-      - linuxgang-certs:/etc/nginx/certs/
+      - arktech-certs:/etc/nginx/certs/
     networks:
-      - linuxgang-network
+      - arktech-network
 
 volumes:
-  linuxgang-certs:
+  arktech-certs:
     external: true
-    name: linuxgang-certs
+    name: arktech-certs
 
 networks:
-  linuxgang-network:
+  arktech-network:
     driver: bridge
