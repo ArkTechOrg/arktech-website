@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import navMenuIcon from "../assets/nav/nav-menu-icon.svg";
-import githubMarkWhite from "../assets/nav/github-mark-white.svg";
+import navMenuIcon from "../../assets/nav/nav-menu-icon.svg";
+import githubMarkWhite from "../../assets/nav/github-mark-white.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { Outlet, NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 const textHover = {
   type: "spring",

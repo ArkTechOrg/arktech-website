@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Penguin from "../assets/section/linuxgang-penguin.svg";
+import Penguin from "../../assets/section/arktech-penguin.svg";
 import { AnimatePresence, motion } from "framer-motion";
+import "./Body.css";
 
 const spring = {
   type: "spring",
