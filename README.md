@@ -1,6 +1,6 @@
-# GNU/Linux Gang Website
+# ArkTech Website
 
-> Docker Image: [Click here](https://hub.docker.com/r/arkapravoghosh1/linuxgang-website)
+> Docker Image: [Click here](https://hub.docker.com/r/arkapravoghosh1/arktech-website)
 
 ## Build Prerequisites
 - [Node.js](https://nodejs.org/en/) (v18.15.0 or higher)
@@ -8,7 +8,7 @@
 > Optional: [Docker](https://docs.docker.com/engine/install/) (v20.10.8 or higher)
 
 ```bash
-git clone https://github.com/Linux-Gang/linuxgang-website.git
+git clone https://github.com/ArkTechOrg/arktech-website.git
 ```
 
 ## Setting up the project
@@ -18,7 +18,7 @@ To set up the project on your local machine, follow these steps:
 1. Navigate to the project directory in your terminal.
 
 ```bash
-cd linuxgang-website
+cd arktech-website
 ```
 
 2. Run the following command to install the required node modules:
@@ -61,11 +61,11 @@ serve -s dist
 ## Deploying in Docker
 #### Building the docker image and deploying it in a container
 - Make sure your present working directory is the root directory of the project
-- `docker build -t linuxgang-website:latest .` to build the docker image
+- `docker build -t arktech-website:latest .` to build the docker image
 <details>
     <summary>Using Docker Run</summary>
 
-- `docker run --rm --name irlamigo-website -p 443:443/tcp -p 80:80/tcp -d linuxgang-website:latest` to deploy the docker image into a container
+- `docker run --rm --name irlamigo-website -p 443:443/tcp -p 80:80/tcp -d arktech-website:latest` to deploy the docker image into a container
 </details>
 <details>
     <summary><b>Alternate:</b> Using Docker Compose</summary>
@@ -81,24 +81,24 @@ serve -s dist
 ### Enable the Docker registry service
 - `docker run -d -p 5000:5000 --restart=always --name registry registry:2` (Run this command only once)
 ### Tag and push the image to the registry
-- `docker tag linuxgang-website localhost:5000/linuxgang-website:latest`
-- `docker push localhost:5000/linuxgang-website:latest`
+- `docker tag arktech-website localhost:5000/arktech-website:latest`
+- `docker push localhost:5000/arktech-website:latest`
 ### Deploy the image from the registry
-- `docker run --rm --name linuxgang-website -p 443:443/tcp -p 80:80/tcp -d localhost:5000/linuxgang-website:latest`
+- `docker run --rm --name arktech-website -p 443:443/tcp -p 80:80/tcp -d localhost:5000/arktech-website:latest`
 
 </details>
 
 **WARNING:** Doing so would expose the project to local network. Make sure you're connected to your own secure network to protect from undiscovered security vulnerabilities and to maintain the privacy of this project, or consider using a firewall for safety reasons
 #### Removing the docker container and image
-- `docker container stop linuxgang-website` to stop the docker container
+- `docker container stop arktech-website` to stop the docker container
 > **NOTE**: If you started the container using Docker Compose, run `docker compose down` instead.
-- `docker image rm linuxgang-website:latest` to remove the image
+- `docker image rm arktech-website:latest` to remove the image
 
 ## Deploy prebuilt docker image
 
 ```bash
-docker pull docker.io/arkapravoghosh1/linuxgang-website:latest
-docker run --rm --name linuxgang-website -p 443:443/tcp -p 80:80/tcp -d arkapravoghosh1/linuxgang-website:latest
+docker pull docker.io/arkapravoghosh1/arktech-website:latest
+docker run --rm --name arktech-website -p 443:443/tcp -p 80:80/tcp -d arkapravoghosh1/arktech-website:latest
 ```
 
 ## Conclusion
