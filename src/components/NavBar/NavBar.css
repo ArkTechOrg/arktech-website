@@ -8,6 +8,17 @@ nav {
   z-index: 1;
 }
 
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  z-index: 1;
+  position: fixed;
+  left: 15px;
+}
+
 .nav-menu {
   display: none;
 }
@@ -46,6 +57,10 @@ nav {
 @media screen and (max-width: 600px) {
   nav {
     display: unset;
+  }
+
+  .nav-logo {
+    display: none;
   }
 
   .nav-content ul {

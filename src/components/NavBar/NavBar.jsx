@@ -4,6 +4,7 @@ import githubMarkWhite from "../../assets/nav/github-mark-white.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { Outlet, NavLink } from "react-router-dom";
 import "./NavBar.css";
+import logo from "../../../public/arktech-logo.svg";
 
 const textHover = {
   type: "spring",
@@ -29,6 +30,15 @@ const githubButtonHover = {
   damping: 25,
   duration: 0.2,
   borderRadius: "50%",
+};
+
+const LogoHover = {
+  type: "spring",
+  scale: 1.1,
+  boxShadow: "#707070 0px 0px 10px",
+  stiffness: 800,
+  damping: 25,
+  duration: 0.2,
 };
 
 const sidebar = {
@@ -58,6 +68,18 @@ function Navbar() {
         <motion.nav initial={{ y: -30 }} animate={{ y: 0 }}>
           <div class="nav-content">
             <AnimatePresence>
+              <div className="nav-logo">
+                <NavLink to="/">
+                  <motion.img
+                    whileHover={LogoHover}
+                    height="30x"
+                    width="30px"
+                    src={logo}
+                    alt="GitHub Link"
+                  >
+                  </motion.img>
+                </NavLink>
+              </div>
               <ul>
                 <motion.li transition={spring} whileHover={textHover}>
                   <NavLink to="/">Home</NavLink>
@@ -70,7 +92,7 @@ function Navbar() {
                 </motion.li>
               </ul>
             </AnimatePresence>
-          </div>
+          </div >
           <div className="nav-github">
             <motion.img
               initial={{ borderRadius: "50%" }}
@@ -122,8 +144,8 @@ function Navbar() {
           >
             <div className="nav-menu_burger" />
           </div>
-        </motion.nav>
-      </AnimatePresence>
+        </motion.nav >
+      </AnimatePresence >
       <Outlet />
     </>
   );
