@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Penguin from "../../assets/section/arktech-penguin.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Body.css";
@@ -31,6 +31,12 @@ const penguin = {
 
 export default function Body() {
   const [isClicked, setClicked] = useState(false);
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    setMobile(matchMedia("(max-width: 600px)").matches);
+  }, [window.innerWidth]);
+
   return (
     <React.Fragment>
       <motion.section layout="size">
@@ -47,9 +53,9 @@ export default function Body() {
                   key="whatsapp"
                   transition={spring}
                   whileHover={{ scale: 1.1 }}
-                  initial={{ x: 50 }}
-                  animate={{ x: 0 }}
-                  exit={{ x: 50 }}
+                  initial={mobile ? { y: 0 } : { x: 50 }}
+                  animate={mobile ? { y: 0 } : { x: 0 }}
+                  exit={mobile ? { y: 0 } : { x: 50 }}
                   className="get__started__button"
                   onClick={() => setClicked(false)}
                 >
@@ -59,9 +65,9 @@ export default function Body() {
                   key="discord"
                   transition={spring}
                   whileHover={{ scale: 1.1 }}
-                  initial={{ x: -50 }}
-                  animate={{ x: 0 }}
-                  exit={{ x: -50 }}
+                  initial={mobile ? { y: -50 } : { x: -50 }}
+                  animate={mobile ? { y: 0 } : { x: 0 }}
+                  exit={mobile ? { y: -50 } : { x: -50 }}
                   className="get__started__button"
                   onClick={() => setClicked(false)}
                 >
