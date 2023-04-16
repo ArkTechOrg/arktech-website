@@ -7,7 +7,13 @@ const spring = {
   type: "spring",
   stiffness: 800,
   damping: 25,
-  duration: 1,
+  duration: 0.1,
+  x: {
+    type: "spring",
+    stiffness: 800,
+    damping: 25,
+    duration: 0.1,
+  },
 };
 
 const penguin = {
@@ -34,34 +40,37 @@ export default function Body() {
         </motion.p>
 
         <div className="get__started__button__container">
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {isClicked ? (
-              <>
+              <AnimatePresence mode="sync">
                 <motion.button
+                  key="whatsapp"
                   transition={spring}
                   whileHover={{ scale: 1.1 }}
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
+                  initial={{ x: 50 }}
+                  animate={{ x: 0 }}
+                  exit={{ x: 50 }}
                   className="get__started__button"
                   onClick={() => setClicked(false)}
                 >
                   WhatsApp
                 </motion.button>
                 <motion.button
+                  key="discord"
                   transition={spring}
                   whileHover={{ scale: 1.1 }}
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
+                  initial={{ x: -50 }}
+                  animate={{ x: 0 }}
+                  exit={{ x: -50 }}
                   className="get__started__button"
                   onClick={() => setClicked(false)}
                 >
                   Discord
                 </motion.button>
-              </>
+              </AnimatePresence>
             ) : (
               <motion.button
+                key="getstarted"
                 transition={spring}
                 whileHover={{ scale: 1.1 }}
                 initial={{ scale: 0 }}
