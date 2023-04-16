@@ -88,7 +88,8 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 18px;
   background-color: #1e1e1e;
   box-shadow: #707070 0px 0px 10px;
