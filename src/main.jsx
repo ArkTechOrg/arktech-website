@@ -14,7 +14,7 @@ ReactDOM.render(
   <React.StrictMode>
     <footer>
       <p>
-        &copy; GNU/Linux Gang {new Date().getFullYear()}
+        &copy; ArkTech {new Date().getFullYear()}
       </p>
     </footer>
   </React.StrictMode>,
