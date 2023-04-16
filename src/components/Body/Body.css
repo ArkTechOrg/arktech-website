@@ -11,8 +11,8 @@ section {
   color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
   gap: 30px;
+  padding-top: 100px;
   padding-bottom: 100px;
   align-items: center;
 }
@@ -99,6 +99,10 @@ footer {
 
 
 @media screen and (max-width: 600px) {
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
   .get__started__button__container {
     flex-direction: column;
