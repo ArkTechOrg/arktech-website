@@ -43,6 +43,11 @@ nav {
   font-size: 18px;
 }
 
+.nav-content a.active {
+  color: #fccf17;
+  font-size: 18px;
+}
+
 .nav-github {
   position: fixed;
   right: 0;
@@ -145,5 +150,4 @@ nav {
     color: azure;
     font-size: 1.75rem;
   }
-
 }

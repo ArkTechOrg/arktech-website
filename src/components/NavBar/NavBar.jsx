@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import navMenuIcon from "../../assets/nav/nav-menu-icon.svg";
 import githubMarkWhite from "../../assets/nav/github-mark-white.svg";
 import { AnimatePresence, motion } from "framer-motion";
-import { Outlet, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import logo from "../../../public/arktech-logo.svg";
 
@@ -76,8 +75,7 @@ function Navbar() {
                     width="30px"
                     src={logo}
                     alt="ArkTech Logo"
-                  >
-                  </motion.img>
+                  ></motion.img>
                 </NavLink>
               </div>
               <ul>
@@ -88,7 +86,7 @@ function Navbar() {
                   <NavLink to="/">Get Started</NavLink>
                 </motion.li>
                 <motion.li transition={spring} whileHover={textHover}>
-                  <NavLink to="/">About Us</NavLink>
+                  <NavLink to="about">About Us</NavLink>
                 </motion.li>
               </ul>
             </AnimatePresence>
@@ -144,9 +142,8 @@ function Navbar() {
           >
             <div className="nav-menu_burger" />
           </div>
-        </motion.nav >
-      </AnimatePresence >
-      <Outlet />
+        </motion.nav>
+      </AnimatePresence>
     </>
   );
 }

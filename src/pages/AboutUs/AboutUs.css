@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+section {
+  background-color: #fccf17;
+  color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  align-items: center;
+}
+
+section h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+section p {
+  text-align: center;
+  font-size: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+}

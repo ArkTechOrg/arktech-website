@@ -1,22 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './styles/App.css'
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "./styles/App.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
-);
-
-ReactDOM.render(
-  <React.StrictMode>
-    <footer>
-      <p>
-        &copy; ArkTech {new Date().getFullYear()}
-      </p>
-    </footer>
-  </React.StrictMode>,
-  document.getElementById('foot')
+  document.getElementById("root")
 );

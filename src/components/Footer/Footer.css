@@ -1,0 +1,15 @@
+footer {
+  top: auto;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  background-color: #1e1e1e;
+  box-shadow: #707070 0px 0px 10px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
