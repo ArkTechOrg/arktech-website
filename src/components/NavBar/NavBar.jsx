@@ -92,7 +92,7 @@ function Navbar() {
                 </motion.li>
               </ul>
             </AnimatePresence>
-          </div >
+          </div>
           <div className="nav-github">
             <motion.img
               initial={{ borderRadius: "50%" }}
