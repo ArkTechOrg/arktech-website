@@ -75,7 +75,7 @@ function Navbar() {
                     height="30x"
                     width="30px"
                     src={logo}
-                    alt="GitHub Link"
+                    alt="ArkTech Logo"
                   >
                   </motion.img>
                 </NavLink>
