@@ -1,18 +1,29 @@
-import React from 'react';
-import Navbar from './components/navbar.jsx';
-import Body from './components/body.jsx';
+import React from "react";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+import Navbar from "./components/navbar.jsx";
+import Body from "./components/body.jsx";
 
-function App() {
-  //const [count, setCount] = useState(0)
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Navbar />}>
+      <Route index element={<Body />} />
+    </Route>
+  )
+);
 
+function App({ routes }) {
   return (
     <div className="App">
       <React.Fragment>
-        <Navbar />
-        <Body />
+        <RouterProvider router={router} />
       </React.Fragment>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

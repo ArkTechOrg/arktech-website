@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import navMenuIcon from "../assets/nav/nav-menu-icon.svg";
 import githubMarkWhite from "../assets/nav/github-mark-white.svg";
 import { AnimatePresence, motion } from "framer-motion";
+import { Outlet, NavLink } from "react-router-dom";
 
 const textHover = {
   type: "spring",
@@ -51,76 +52,79 @@ const sidebar_item = {
 function Navbar() {
   const [showSidebar, setShowSidebar] = useState(false);
   return (
-    <AnimatePresence>
-      <motion.nav initial={{ y: -30 }} animate={{ y: 0 }}>
-        <div class="nav-content">
+    <>
+      <AnimatePresence>
+        <motion.nav initial={{ y: -30 }} animate={{ y: 0 }}>
+          <div class="nav-content">
+            <AnimatePresence>
+              <ul>
+                <motion.li transition={spring} whileHover={textHover}>
+                  <NavLink to="/">Home</NavLink>
+                </motion.li>
+                <motion.li transition={spring} whileHover={textHover}>
+                  <NavLink to="/">Get Started</NavLink>
+                </motion.li>
+                <motion.li transition={spring} whileHover={textHover}>
+                  <NavLink to="/">About Us</NavLink>
+                </motion.li>
+              </ul>
+            </AnimatePresence>
+          </div>
+          <div className="nav-github">
+            <motion.img
+              initial={{ borderRadius: "50%" }}
+              whileHover={githubButtonHover}
+              height="30x"
+              width="30px"
+              src={githubMarkWhite}
+              alt="GitHub Link"
+              onClick={() => window.open("https://github.com/Linux-Gang")}
+            />
+          </div>
           <AnimatePresence>
-            <ul>
-              <motion.li transition={spring} whileHover={textHover}>
-                <a href="/">Home</a>
-              </motion.li>
-              <motion.li transition={spring} whileHover={textHover}>
-                <a href="/">Get Started</a>
-              </motion.li>
-              <motion.li transition={spring} whileHover={textHover}>
-                <a href="/">About Us</a>
-              </motion.li>
-            </ul>
+            {showSidebar && (
+              <motion.div
+                transition={{ type: "tween" }}
+                className="sidebar"
+                onClick={() => setShowSidebar(false)}
+                initial={{ x: "-60vw" }}
+                animate={{ x: 0 }}
+                exit={{ x: "-60vw" }}
+              >
+                <AnimatePresence>
+                  <motion.ul
+                    variants={sidebar}
+                    initial="start"
+                    animate="finished"
+                  >
+                    <motion.li variants={sidebar_item}>
+                      <NavLink to="/">Home</NavLink>
+                    </motion.li>
+                    <motion.li variants={sidebar_item}>
+                      <NavLink to="/">Get Started</NavLink>
+                    </motion.li>
+                    <motion.li variants={sidebar_item}>
+                      <NavLink to="/">About Us</NavLink>
+                    </motion.li>
+                  </motion.ul>
+                </AnimatePresence>
+              </motion.div>
+            )}
           </AnimatePresence>
-        </div>
-        <div className="nav-github">
-          <motion.img
-            initial={{ borderRadius: "50%" }}
-            whileHover={githubButtonHover}
-            height="30x"
-            width="30px"
-            src={githubMarkWhite}
-            alt="GitHub Link"
-            onClick={() => window.open("https://github.com/Linux-Gang")}
-          />
-        </div>
-        <AnimatePresence>
-          {showSidebar && (
-            <motion.div
-              transition={{ type: "tween" }}
-              className="sidebar"
-              onClick={() => setShowSidebar(false)}
-              initial={{ x: "-60vw" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-60vw" }}
-            >
-              <AnimatePresence>
-                <motion.ul
-                  variants={sidebar}
-                  initial="start"
-                  animate="finished"
-                >
-                  <motion.li variants={sidebar_item}>
-                    <a href="/">Home</a>
-                  </motion.li>
-                  <motion.li variants={sidebar_item}>
-                    <a href="/">Get Started</a>
-                  </motion.li>
-                  <motion.li variants={sidebar_item}>
-                    <a href="/">About Us</a>
-                  </motion.li>
-                </motion.ul>
-              </AnimatePresence>
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <div
-          className={showSidebar ? "nav-menu open" : "nav-menu"}
-          onClick={
-            showSidebar
-              ? () => setShowSidebar(false)
-              : () => setShowSidebar(true)
-          }
-        >
-          <div className="nav-menu_burger" />
-        </div>
-      </motion.nav>
-    </AnimatePresence>
+          <div
+            className={showSidebar ? "nav-menu open" : "nav-menu"}
+            onClick={
+              showSidebar
+                ? () => setShowSidebar(false)
+                : () => setShowSidebar(true)
+            }
+          >
+            <div className="nav-menu_burger" />
+          </div>
+        </motion.nav>
+      </AnimatePresence>
+      <Outlet />
+    </>
   );
 }
 
