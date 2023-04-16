@@ -27,7 +27,7 @@ export default function Body() {
   return (
     <React.Fragment>
       <motion.section layout="size">
-        <motion.h1 layout="position">Join the GNU/Linux Gang</motion.h1>
+        <motion.h1 layout="position">Join ArkTech</motion.h1>
         <motion.p layout="position">
           Collaborate with Developers and work on Open Source Projects
         </motion.p>
