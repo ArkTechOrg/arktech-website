@@ -4,7 +4,7 @@ import githubMarkWhite from "../../assets/nav/github-mark-white.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { Outlet, NavLink } from "react-router-dom";
 import "./NavBar.css";
-import logo from "../../../public/arktech-logo.svg";
+import logo from "../../assets/nav/arktech-logo.svg";
 
 const textHover = {
   type: "spring",
