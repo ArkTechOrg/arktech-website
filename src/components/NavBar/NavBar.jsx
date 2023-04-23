@@ -127,7 +127,7 @@ function Navbar() {
                       <NavLink to="/">Get Started</NavLink>
                     </motion.li>
                     <motion.li variants={sidebar_item}>
-                      <NavLink to="/">About Us</NavLink>
+                      <NavLink to="/about">About Us</NavLink>
                     </motion.li>
                   </motion.ul>
                 </AnimatePresence>

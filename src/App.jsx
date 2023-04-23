@@ -7,11 +7,13 @@ import {
 } from "react-router-dom";
 import Body from "./components/Body/Body";
 import NavBar from "./components/NavBar/NavBar";
+import AboutUs from "./pages/AboutUs/AboutUs";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<NavBar />}>
       <Route index element={<Body />} />
+      <Route path="/about" element={<AboutUs />} />
     </Route>
   )
 );
