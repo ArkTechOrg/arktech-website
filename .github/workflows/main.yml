@@ -1,0 +1,26 @@
+name: "Deployment"
+on:
+  push:
+    branches: [ "master" ]
+jobs:
+  deploy-to-gh-pages:
+    name: Deploy to github pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setting up Nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Installing Dependecies
+        run: npm ci
+      - name: Comfiguring git
+        run: |
+          git config --global user.name '${{ github.repository_owner }}'
+          git config --global user.email '${{ github.repository_owner }}@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+      - name: Deploy to Github pages
+        run: |
+          npm run build
+          npm run deploy
