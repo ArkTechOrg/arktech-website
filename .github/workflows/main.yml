@@ -2,6 +2,7 @@ name: "Deployment"
 on:
   push:
     branches: [ "master" ]
+  workflow_dispatch:
 jobs:
   deploy-to-gh-pages:
     name: Deploy to github pages
