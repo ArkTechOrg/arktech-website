@@ -1,6 +1,7 @@
 # ArkTech Website
 
-> Website: [Click here](https://ark-tech.in)
+> Website: [Click here](https://ark-tech.in)\
+> Design: [Click Here](https://www.figma.com/file/BvzzxtN3Yr8NEgIsQp1fkS/ArkTech?type=design&node-id=70%3A4&mode=dev)
 <!--
 > Docker Image: [Click here](https://hub.docker.com/r/arkapravoghosh1/arktech-website)
 -->
