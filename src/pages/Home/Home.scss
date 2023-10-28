@@ -1,0 +1,50 @@
+@import "../../styles/variables.scss";
+
+.home {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .home__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.625rem;
+    align-self: stretch;
+    text-align: center;
+    flex: 1;
+    height: 100%;
+
+    .home__header__head {
+      text-shadow: 0rem 0rem 1.25rem #00000040;
+      font-size: 3.125rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .home__header__subhead {
+      text-shadow: 0rem 0rem 1.25rem #00000040;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  .home__penguin {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: stretch;
+    bottom: 0;
+
+    .home__penguin__image {
+      $size: 19.1875rem;
+      height: $size;
+      filter: drop-shadow(0rem 0rem 3.125rem #00000040);
+    }
+  }
+}
