@@ -40,10 +40,13 @@
     align-items: flex-end;
     align-self: stretch;
     bottom: 0;
+    position: relative;
 
     .home__penguin__image {
-      $size: 19.1875rem;
-      height: $size;
+      position: absolute;
+      bottom: -1.25rem;
+      right: 0;
+      height: 19.1875rem;
       filter: drop-shadow(0rem 0rem 3.125rem #00000040);
     }
   }
